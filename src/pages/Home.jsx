@@ -5,7 +5,7 @@ import Footer from "../components/footer/Footer";
 
 const Home = () => {
     return (
-        <div className="space-y-8 mt-8">
+        <div className="space-y-8">
             <Banner></Banner>
             {/* <h1>Home page this</h1>             */}
             <Footer></Footer>
