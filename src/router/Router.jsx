@@ -1,11 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../root/Root";
 import Home from "../pages/Home";
-import Service from "../pages/Service";
-import About from "../pages/About";
-import Contact from "../pages/Contact";
 import Login from "../pages/Login";
 import Registration from "../pages/Registration";
+import UpdateProfile from "../pages/UpdateProfile";
+import UserProfile from "../pages/UserProfile";
 
 
 
@@ -22,16 +21,12 @@ export const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path: '/service',
-                element: <Service></Service>
+                path: '/updateProfile',
+                element: <UpdateProfile></UpdateProfile>
             },
             {
-                path: '/about',
-                element: <About></About>
-            },
-            {
-                path: '/contact',
-                element: <Contact></Contact>
+                path: '/userProfile',
+                element: <UserProfile></UserProfile>
             },
             {
                 path: '/login',

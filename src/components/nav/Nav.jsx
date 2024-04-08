@@ -5,10 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 const Nav = () => {
     const navLink = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
-        <li><NavLink to={'/Service'}>Service</NavLink></li>
-        <li><NavLink to={'/about'}>About</NavLink></li>
-        <li><NavLink to={'/contact'}>Contact</NavLink></li>
-        
+        <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>
+        <li><NavLink to={'/userProfile'}>User Profile</NavLink></li>
     </>
 
     return (

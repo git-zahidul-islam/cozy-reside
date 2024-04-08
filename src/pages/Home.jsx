@@ -1,11 +1,13 @@
+import Banner from "../components/banner/Banner";
 import Footer from "../components/footer/Footer";
 
 
 
 const Home = () => {
     return (
-        <div>
-            <h1>Home page this</h1>            
+        <div className="space-y-8 mt-8">
+            <Banner></Banner>
+            {/* <h1>Home page this</h1>             */}
             <Footer></Footer>
         </div>
     );
