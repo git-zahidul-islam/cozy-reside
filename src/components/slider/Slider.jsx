@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 
 // import '/styles.css';
 
-import { Pagination, Navigation } from 'swiper/modules';
+import { Autoplay,Pagination, Navigation } from 'swiper/modules';
 
 // import sliderImage1 from '../../../public/slider/slider1.jpg'
 // import sliderImage2 from '../../../public/slider/slider2.jpg'
@@ -20,12 +20,16 @@ const Slider = () => {
             <Swiper
                 slidesPerView={1}
                 spaceBetween={30}
+                autoplay={{
+                    delay: 4000,
+                    disableOnInteraction: false,
+                }}
                 loop={true}
                 pagination={{
                     clickable: true,
                 }}
                 navigation={true}
-                modules={[Pagination, Navigation]}
+                modules={[Autoplay,Pagination, Navigation]}
                 className="mySwiper"
             >
                 <SwiperSlide>

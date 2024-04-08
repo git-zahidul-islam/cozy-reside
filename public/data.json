@@ -1,0 +1,98 @@
+[
+    {
+        "id": 1,
+        "estate_title": "Modern Home with Garden Oasis",
+        "image": "https://example.com/single_family_home_image1.jpg",
+        "segment_name": "Single-family home",
+        "description": "Step into luxury living with this modern home. Featuring spacious interiors, a beautifully landscaped garden, and upscale finishes.",
+        "price": "$1,500,000",
+        "status": "sale",
+        "area": "3000 sqft",
+        "location": "Suburban Neighborhood, City A",
+        "facilities": [
+            "Garden",
+            "Patio",
+            "Home Theater"
+        ]
+    },
+    {
+        "id": 2,
+        "estate_title": "Scenic Townhouse Retreat",
+        "image": "https://example.com/townhouse_image1.jpg",
+        "segment_name": "Townhouse",
+        "description": "Escape to this townhouse retreat nestled in scenic surroundings. With its cozy atmosphere, outdoor living spaces, and proximity to nature trails.",
+        "price": "$700,000",
+        "status": "sale",
+        "area": "2000 sqft",
+        "location": "Sylvan Heights, City B",
+        "facilities": [
+            "Deck",
+            "Community Pool",
+            "Walking Trails"
+        ]
+    },
+    {
+        "id": 3,
+        "estate_title": "Luxury Apartment in City Center",
+        "image": "https://example.com/apartment_image3.jpg",
+        "segment_name": "Apartment",
+        "description": "Experience luxury apartment living in the heart of the city. With sleek modern design, top-notch amenities, and panoramic city views.",
+        "price": "$900,000",
+        "status": "sale",
+        "area": "1800 sqft",
+        "location": "Downtown District, City C",
+        "facilities": [
+            "Swimming Pool",
+            "Fitness Center",
+            "Concierge Service"
+        ]
+    },
+    {
+        "id": 4,
+        "estate_title": "Charming Home with Garden Views",
+        "image": "https://example.com/single_family_home_image2.jpg",
+        "segment_name": "Single-family home",
+        "description": "This charming home boasts garden views and a serene atmosphere. Ideal for families, it offers spacious living areas, a gourmet kitchen, and a backyard oasis.",
+        "price": "$800,000",
+        "status": "sale",
+        "area": "2500 sqft",
+        "location": "Quiet Suburb, City D",
+        "facilities": [
+            "Backyard Garden",
+            "Fireplace",
+            "Home Office"
+        ]
+    },
+    {
+        "id": 5,
+        "estate_title": "Modern Townhouse with Rooftop Terrace",
+        "image": "https://example.com/townhouse_image2.jpg",
+        "segment_name": "Townhouse",
+        "description": "Live in style with this modern townhouse featuring a rooftop terrace. Perfect for entertaining, it offers sleek design, open-plan living, and convenient access to urban amenities.",
+        "price": "$950,000",
+        "status": "sale",
+        "area": "2200 sqft",
+        "location": "City Center, City E",
+        "facilities": [
+            "Rooftop Terrace",
+            "Private Garage",
+            "Smart Home Technology"
+        ]
+    },
+    {
+        "id": 6,
+        "estate_title": "Luxury Apartment with River Views",
+        "image": "https://example.com/apartment_image4.jpg",
+        "segment_name": "Apartment",
+        "description": "Enjoy breathtaking river views from this luxurious apartment. With spacious layouts, premium finishes, and resort-style amenities.",
+        "price": "$1,100,000",
+        "status": "sale",
+        "area": "2000 sqft",
+        "location": "Waterfront District, City F",
+        "facilities": [
+            "Riverfront Balcony",
+            "Spa",
+            "Concierge Service"
+        ]
+    }
+]
