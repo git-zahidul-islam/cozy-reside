@@ -1,14 +1,12 @@
 import Footer from "../components/footer/Footer";
 
-
-
-const Home = () => {
+const Contact = () => {
     return (
         <div>
-            <h1>Home page this</h1>            
+            <h1>contact us page</h1>
             <Footer></Footer>
         </div>
     );
 };
 
-export default Home;
+export default Contact;
