@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 
 const Card = ({ details }) => {
@@ -20,7 +21,7 @@ const Card = ({ details }) => {
                 </div>
                 <hr className="border-[1px] border-dashed" />
                 <p>{description.split(" ").slice(0, 10).join(" ") + " . . . . . ."}</p>
-                <button className="p-2 bg-orange-400">view details</button>
+                <Link to={`/card/${id}`}><button className="p-2 bg-orange-400">view details</button></Link>
             </div>
         </div>
     );
