@@ -1,13 +1,26 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../context/AuthProvider";
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
+    const { userLogin } = useContext(AuthContext)
 
     const handleLogin = (data) => {
-        const {email,password} = data;
-        console.log(email,password)
+        const { email, password } = data;
+        console.log(email, password)
+        userLogin(email, password)
+            .then(result => {
+                console.log("login successfully",result)
+
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }
+
+
 
     return (
         <div className="flex justify-center items-center h-[calc(100vh-68px)]">
@@ -19,16 +32,16 @@ const Login = () => {
                         <label htmlFor="username" className="block text-gray-400">Email</label>
                         <input
                             {...register("email", { required: true })}
-                         type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white" 
-                         />
+                            type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
+                        />
                         {errors.email && <span className="text-red-500">This field is required</span>}
                     </div>
                     <div className="space-y-1 text-sm">
                         <label htmlFor="password" className="block text-gray-400">Password</label>
                         <input
                             {...register("password", { required: true })}
-                         type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  focus:border-violet-400 bg-white" 
-                         />
+                            type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  focus:border-violet-400 bg-white"
+                        />
                         {errors.password && <span className="text-red-500">This field is required</span>}
                         <div className="flex justify-end text-xs text-gray-400">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>

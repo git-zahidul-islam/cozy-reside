@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 
 
 const Nav = () => {
+    const { userLogOut,user } = useContext(AuthContext)
+
     const navLink = <>
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>

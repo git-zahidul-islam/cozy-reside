@@ -22,7 +22,7 @@
         "segment_name": "Townhouse",
         "description": "Escape to this townhouse retreat nestled in scenic surroundings. With its cozy atmosphere, outdoor living spaces, and proximity to nature trails.",
         "price": "$700,000",
-        "status": "sale",
+        "status": "rent",
         "area": "2000 sqft",
         "location": "Sylvan Heights, City B",
         "facilities": [
@@ -54,7 +54,7 @@
         "segment_name": "Single-family home",
         "description": "This charming home boasts garden views and a serene atmosphere. Ideal for families, it offers spacious living areas, a gourmet kitchen, and a backyard oasis.",
         "price": "$800,000",
-        "status": "sale",
+        "status": "rent",
         "area": "2500 sqft",
         "location": "Quiet Suburb, City D",
         "facilities": [
