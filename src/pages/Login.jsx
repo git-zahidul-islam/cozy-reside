@@ -8,7 +8,7 @@ const Login = () => {
     const { userLogin } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-    console.log("login page location",location);
+    // console.log("login page location",location);
 
     const handleLogin = (data) => {
         const { email, password } = data;
