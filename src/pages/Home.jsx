@@ -7,7 +7,7 @@ import Card from '../components/card/Card';
 
 const Home = () => {
     const allData = useLoaderData()
-    console.log(allData)
+    // console.log(allData)
 
 
     return (

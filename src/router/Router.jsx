@@ -6,6 +6,7 @@ import Registration from "../pages/Registration";
 import UpdateProfile from "../pages/UpdateProfile";
 import UserProfile from "../pages/UserProfile";
 import CardDetails from "../pages/CardDetails";
+import PrivateRouter from "./PrivateRouter";
 
 
 
@@ -24,7 +25,8 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'card/:id',
-                element: <CardDetails></CardDetails>
+                element: <PrivateRouter><CardDetails></CardDetails></PrivateRouter>,
+                loader: () => fetch('/data.json')
             },
             {
                 path: '/updateProfile',

@@ -30,7 +30,7 @@ const Slider = () => {
                 }}
                 navigation={true}
                 modules={[Autoplay,Pagination, Navigation]}
-                className="mySwiper"
+                className="mySwiper h-[70vh] w-full"
             >
                 <SwiperSlide>
                     <div className='bg-[url(/public/slider/slider1.jpg)] h-screen'>
