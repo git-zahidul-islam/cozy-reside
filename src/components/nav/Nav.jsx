@@ -2,8 +2,6 @@ import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
 
-
-
 const Nav = () => {
     const { userLogOut, user } = useContext(AuthContext)
     // console.log("for kmow name", user)
@@ -13,8 +11,8 @@ const Nav = () => {
         <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>
         <li><NavLink to={'/userProfile'}>User Profile</NavLink></li>
     </>
-    const avater = <>
-        https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg
+    const nameSet = <>
+        <p>set name</p>
     </>
 
     const handleLogOut = () => {
@@ -50,17 +48,22 @@ const Nav = () => {
                 {
                     user ?
                         <div className="flex items-center gap-2">
-                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
-                                    <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                            <div className="relative group">
+                                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                    <div className="w-10 rounded-full">
+                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : `https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg`} />
+                                    </div>
+                                </div>
+                                <div className="absolute invisible group-hover:visible bg-slate-500 p-2 z-50 w-36 -left-10 rounded-lg">
+                                    <h1>{user && user.displayName }</h1>
                                 </div>
                             </div>
                             <button onClick={handleLogOut} className="px-3 py-2 bg-slate-400">Logout</button>
                         </div>
-                        : 
+                        :
                         <Link to={'/login'}><button className="px-3 py-2 bg-slate-400">Login</button></Link>
                 }
-                
+
             </div>
         </div>
     );
