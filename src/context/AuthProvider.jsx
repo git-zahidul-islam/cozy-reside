@@ -1,4 +1,4 @@
-import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { createContext, useEffect, useState } from "react";
 import { auth } from "../firebasc/firebasc.config";
 
@@ -28,11 +28,14 @@ const AuthProvider = ({ children }) => {
     }
     const loginWithGoogle = () => {
         setLoading(true)
-        return signInWithPopup(auth,googleProvider)
+        return signInWithPopup(auth, googleProvider)
     }
     const loginWithGithub = () => {
         setLoading(true)
-        return signInWithPopup(auth,githubProvider)
+        return signInWithPopup(auth, githubProvider)
+    }
+    const profileUpdate = () => {
+        return updateProfile(auth.currentUser)
     }
 
 
@@ -54,6 +57,7 @@ const AuthProvider = ({ children }) => {
         userLogOut,
         loginWithGoogle,
         loginWithGithub,
+        profileUpdate,
         user,
         loading
     }
