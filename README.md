@@ -4,3 +4,5 @@
 1. Swiper slider
 2. React Hook form
 3. react-loader-spinner 
+
+# react icon use
