@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
-import { IoLogoGoogle } from "react-icons/io";
+import { Helmet } from "react-helmet-async";
+
 
 const Login = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
@@ -50,6 +51,9 @@ const Login = () => {
 
     return (
         <div className="flex justify-center items-center h-[calc(100vh-68px)]">
+            <Helmet>
+                <title>Cozy Reside | Login</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-3 bg-gray-200">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
                 <hr className="border-[1px] border-white" />

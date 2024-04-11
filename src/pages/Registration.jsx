@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 
@@ -24,6 +25,9 @@ const Registration = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Cozy Reside | Registration</title>
+            </Helmet>
             <div className="flex justify-center items-center h-[calc(100vh-68px)]">
                 <div className="w-full max-w-md p-8 space-y-3 bg-gray-200">
                     <h1 className="text-2xl font-bold text-center">Registration Page</h1>

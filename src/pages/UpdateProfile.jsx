@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../context/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
@@ -16,6 +17,9 @@ const UpdateProfile = () => {
 
     return (
         <div className="flex justify-center items-center mt-10">
+            <Helmet>
+                <title>Cozy Reside | Update Profile</title>
+            </Helmet>
             <div className="w-full max-w-md p-8 space-y-3 bg-gray-200 rounded-tr-[80px]">
                 <form onSubmit={handleSubmit(handleUpdate)} className="space-y-6 px-3">
                     <div className="space-y-1 text-sm">

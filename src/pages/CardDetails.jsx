@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async';
 import { useParams, useLoaderData } from 'react-router-dom'
 
 
@@ -14,6 +15,9 @@ const CardDetails = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>{estate_title.slice(0,20)} . . .</title>
+            </Helmet>
             <h1>{estate_title}</h1>
             <div className='w-96 h-80 border-2'>
                 <img className='h-full' src={image} alt="" />

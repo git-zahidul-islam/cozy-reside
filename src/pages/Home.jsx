@@ -3,6 +3,7 @@ import {useLoaderData} from 'react-router-dom'
 import Banner from "../components/banner/Banner";
 import Footer from "../components/footer/Footer";
 import Card from '../components/card/Card';
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
@@ -12,6 +13,9 @@ const Home = () => {
 
     return (
         <div className="space-y-8">
+            <Helmet>
+                <title>Cozy Reside | Home</title>
+            </Helmet>
             <Banner></Banner>
             <div className='space-y-6'>
                 <div className='flex flex-col items-center'>
