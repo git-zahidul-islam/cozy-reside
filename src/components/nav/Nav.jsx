@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
+import userPhoto from '../../../public/otherIMG/user.png'
 
 const Nav = () => {
     const { userLogOut, user } = useContext(AuthContext)
@@ -10,9 +11,6 @@ const Nav = () => {
         <li><NavLink to={'/'}>Home</NavLink></li>
         <li><NavLink to={'/updateProfile'}>Update Profile</NavLink></li>
         <li><NavLink to={'/userProfile'}>User Profile</NavLink></li>
-    </>
-    const nameSet = <>
-        <p>set name</p>
     </>
 
     const handleLogOut = () => {
@@ -51,7 +49,7 @@ const Nav = () => {
                             <div className="relative group">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : `https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg`} />
+                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : userPhoto } />
                                     </div>
                                 </div>
                                 <div className="absolute invisible group-hover:visible bg-slate-500 p-2 z-50 w-36 -left-10 rounded-lg">

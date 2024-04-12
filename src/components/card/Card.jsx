@@ -8,7 +8,7 @@ const Card = ({ details }) => {
 
     return (
         <div>
-            <div className="shadow-md">
+            <div className="shadow-md bg-white">
                 <div className="h-64">
                     <img className="h-full w-full" src={image} alt="" />
                 </div>
