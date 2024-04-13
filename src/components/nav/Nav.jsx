@@ -35,7 +35,7 @@ const Nav = () => {
                         {navLink}
                     </ul>
                 </div>
-                <a className="text-2xl font-bold">Cozy Reside</a>
+                <Link to={'/'} className="text-2xl font-bold">Cozy <span className="text-[#08D9D6]">Reside</span></Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
@@ -56,7 +56,7 @@ const Nav = () => {
                                     <h1>{user && user.displayName }</h1>
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="px-3 py-2 bg-slate-400">Logout</button>
+                            <button onClick={handleLogOut} className="px-3 py-2 bg-[#FF55BB] text-white text-base font-medium">Logout</button>
                         </div>
                         :
                         <Link to={'/login'}><button className="px-3 py-2 bg-slate-400">Login</button></Link>

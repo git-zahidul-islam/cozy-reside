@@ -4,6 +4,7 @@ import Banner from "../components/banner/Banner";
 import Footer from "../components/footer/Footer";
 import Card from '../components/card/Card';
 import { Helmet } from 'react-helmet-async';
+import BestPlace from '../components/BestPlace/BestPlace';
 
 
 const Home = () => {
@@ -17,9 +18,10 @@ const Home = () => {
                 <title>Cozy Reside | Home</title>
             </Helmet>
             <Banner></Banner>
+            <BestPlace></BestPlace>
             <div className='space-y-6'>
                 <div className='flex flex-col items-center'>
-                    <h1 className='text-3xl font-bold text-center'>Estate List</h1>
+                    <h1 className='text-3xl font-bold text-center'>Our All <span className='text-[#FF55BB]'>Property</span> List</h1>
                     <p className='text-center text-lg md:w-[600px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, cupiditate. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className='grid md:grid-cols-3 gap-10'>
