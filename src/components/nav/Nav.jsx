@@ -56,10 +56,10 @@ const Nav = () => {
                                     <h1>{user && user.displayName }</h1>
                                 </div>
                             </div>
-                            <button onClick={handleLogOut} className="px-3 py-2 bg-[#FF55BB] text-white text-base font-medium">Logout</button>
+                            <button onClick={handleLogOut} className="px-3 py-2 bg-[#5755FE] text-white text-base font-medium">Logout</button>
                         </div>
                         :
-                        <Link to={'/login'}><button className="px-3 py-2 bg-slate-400">Login</button></Link>
+                        <Link to={'/login'}><button className="px-3 py-2 bg-[#5755FE] text-white font-bold">Login</button></Link>
                 }
 
             </div>

@@ -96,7 +96,7 @@ const Login = () => {
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
                         </div>
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Sign in</button>
+                    <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Login</button>
                 </form>
                 <p className="text-sm text-center sm:px-6 dark:text-gray-600">Don't have an account?
                     <Link className="text-purple-500" to={'/registration'}> Register</Link>
