@@ -15,7 +15,7 @@ const Banner = () => {
         //     </div>
         // </div>
 
-        <div>
+        <div className="mt-5">
             <Slider></Slider>
         </div>
     );
