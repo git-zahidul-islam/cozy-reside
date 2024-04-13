@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import Lottie from 'react-lottie';
+import animationData from '../../public/Animation/Animation - 1712975389596.json'
 
 
 const Login = () => {
@@ -47,14 +49,31 @@ const Login = () => {
             })
     }
 
+    // login page svg
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
 
 
     return (
-        <div className="flex justify-center items-center h-[calc(100vh-68px)]">
+        <div className="flex justify-center items-center mt-5">
             <Helmet>
                 <title>Cozy Reside | Login</title>
             </Helmet>
-            <div className="w-full max-w-md p-8 space-y-3 bg-gray-200">
+            <div className="lg:block md:block hidden">
+                <Lottie
+                    options={defaultOptions}
+                    height={450}
+                    width={500}
+                >     
+                </Lottie>
+            </div>
+            <div className=" w-full max-w-md p-8 space-y-3 bg-gray-200">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
                 <hr className="border-[1px] border-white" />
                 <form onSubmit={handleSubmit(handleLogin)} className="space-y-6 px-3">

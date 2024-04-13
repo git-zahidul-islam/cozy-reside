@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
+import Lottie from 'react-lottie';
+import animationData from '../../public/Animation/regestation.json'
 
 
 
@@ -22,13 +24,30 @@ const Registration = () => {
                 console.error(error);
             })
     }
+    // reg page svg
+    const defaultOptions = {
+        loop: true,
+        autoplay: true,
+        animationData: animationData,
+        rendererSettings: {
+            preserveAspectRatio: 'xMidYMid slice'
+        }
+    };
 
     return (
-        <div>
+        <div className="flex justify-center items-center mt-5">
             <Helmet>
                 <title>Cozy Reside | Registration</title>
             </Helmet>
-            <div className="flex justify-center items-center h-[calc(100vh-68px)]">
+            <div className="lg:block md:block hidden">
+                <Lottie
+                    options={defaultOptions}
+                    height={450}
+                    width={500}
+                >
+                </Lottie>
+            </div>
+            <div className="flex-1 flex justify-center items-center ">
                 <div className="w-full max-w-md p-8 space-y-3 bg-gray-200">
                     <h1 className="text-2xl font-bold text-center">Registration Page</h1>
                     <hr className="border-[1px] border-white" />
