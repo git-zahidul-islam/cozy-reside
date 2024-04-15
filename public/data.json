@@ -13,6 +13,11 @@
             "Garden",
             "Patio",
             "Home Theater"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     },
     {
@@ -29,6 +34,11 @@
             "Deck",
             "Community Pool",
             "Walking Trails"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     },
     {
@@ -45,6 +55,11 @@
             "Swimming Pool",
             "Fitness Center",
             "Concierge Service"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     },
     {
@@ -61,6 +76,11 @@
             "Backyard Garden",
             "Fireplace",
             "Home Office"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     },
     {
@@ -77,6 +97,11 @@
             "Rooftop Terrace",
             "Private Garage",
             "Smart Home Technology"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     },
     {
@@ -93,6 +118,11 @@
             "Riverfront Balcony",
             "Spa",
             "Concierge Service"
+        ],
+        "collection_image": [
+            "https://i.ibb.co/47NnPdt/inside1.jpg",
+            "https://i.ibb.co/PQs3fnC/inside2.jpg",
+            "https://i.ibb.co/zV6FrSj/inside3.jpg"
         ]
     }
 ]
