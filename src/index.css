@@ -3,3 +3,12 @@
 @tailwind components;
 @tailwind utilities;
 
+.main-text {
+    color: #00AFEF;
+}
+.main-bg {
+    background-color: #00AFEF;
+}
+.main-border {
+    border-color: #00AFEF;
+}
