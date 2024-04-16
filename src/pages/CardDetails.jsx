@@ -75,13 +75,13 @@ const CardDetails = () => {
                     <img className='md:w-5/12' src={collection_image[2]} alt="inside 1" />
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Living Room</h1>
-                        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi corporis sapiente quod officiis cupiditate, corrupti pariatur perferendis consequuntur in. Quaerat fugit vitae quo vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum exercitationem dignissimos quibusdam, dolor at in incidunt quisquam non libero ad labore odit quidem pariatur nihil ratione iure ex repellendus iusto! "</p>
+                        <p>" Indulge in the epitome of comfort and sophistication within our meticulously designed living room space. Sink into sumptuous seating arrangements amidst an atmosphere exuding serenity and refinement. Whether youre hosting cherished gatherings or seeking solace in quiet contemplation, our living room offers the perfect setting for every moment. Immerse yourself in unparalleled relaxation and create lasting memories in this haven of elegance and warmth. "</p>
                     </div>
                 </div>
                 <div className='flex lg:flex-row md:flex-row flex-col-reverse items-center gap-4'>
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Kitchen</h1>
-                        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi corporis sapiente quod officiis cupiditate, corrupti pariatur perferendis consequuntur in. Quaerat fugit vitae quo vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum exercitationem dignissimos quibusdam, dolor at in incidunt quisquam non libero ad labore odit quidem pariatur nihil ratione iure ex repellendus iusto! "</p>
+                        <p>"Step into a realm where flavors fuse and creativity flows—a kitchen where every meal is a masterpiece in the making. From the tantalizing scents to the symphony of sizzles, our kitchen is where culinary magic comes to life. Discover the joy of cooking and the art of gathering around the table in our inviting sanctuary. Welcome to a space where delicious moments are crafted and cherished."</p>
                     </div>
                     <img className='md:w-5/12' src={collection_image[1]} alt="inside 1" />
                 </div>
@@ -89,7 +89,7 @@ const CardDetails = () => {
                     <img className='md:w-5/12' src={collection_image[0]} alt="inside 1" />
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Reading Place</h1>
-                        <p>" Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque animi corporis sapiente quod officiis cupiditate, corrupti pariatur perferendis consequuntur in. Quaerat fugit vitae quo vel. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cum exercitationem dignissimos quibusdam, dolor at in incidunt quisquam non libero ad labore odit quidem pariatur nihil ratione iure ex repellendus iusto! "</p>
+                        <p>" Escape into a world of imagination and knowledge within our curated reading space. Nestled amidst cozy nooks and bathed in soft light, its a haven for book lovers and seekers of inspiration alike. Let the tranquility envelop you as you explore literary treasures and embark on intellectual journeys. Discover the joy of quiet contemplation and the power of words in our inviting sanctuary dedicated to the art of reading. "</p>
                     </div>
                 </div>
             </div>
