@@ -48,7 +48,7 @@ const Slider = () => {
                 className="mySwiper rounded-xl"
             >
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] h-4/5'>
+                    <div className='relative lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage1} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             {/* <h1 className='text-red-600 text-2xl'>slide 01</h1> */}
@@ -61,7 +61,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] h-4/5'>
+                    <div className='relative lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage2} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             <div>
@@ -73,7 +73,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] h-4/5'>
+                    <div className='relative lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage3} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             <div>
@@ -85,7 +85,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] h-4/5'>
+                    <div className='relative lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage4} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             <div>
@@ -97,7 +97,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] h-4/5'>
+                    <div className='relative lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage5} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             <div>
@@ -109,7 +109,7 @@ const Slider = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
-                    <div className='relative  lg:h-[650px] md:h-[600px] h-4/5'>
+                    <div className='relative  lg:h-[650px] md:h-[600px] h-[350px]'>
                         <img className='h-full w-full object-fill' src={sliderImage6} alt="" />
                         <div className='absolute flex justify-center items-center w-full h-full top-[1px]'>
                             <div>

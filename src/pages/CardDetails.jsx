@@ -49,11 +49,11 @@ const CardDetails = () => {
             <div className='flex justify-around gap-3 bg-amber-300 py-4 -rotate-2 mt-8'>
                 <div className='border-l-4 ps-2 main-border'>
                     <p className='text-lg font-medium'>Category</p>
-                    <p className='font-bold text-gray-500'>{segment_name}</p>
+                    <p className='text-gray-500'>{segment_name}</p>
                 </div>
                 <div className='border-l-4 ps-2 main-border'>
                     <h3 className='text-lg font-medium'>Facilities</h3>
-                    <div className='flex gap-2 font-bold text-gray-500'>
+                    <div className='flex gap-2 text-gray-500'>
                         <p>{facilities[0]}</p>
                         <p>{facilities[1]}</p>
                         <p>{facilities[2]}</p>
