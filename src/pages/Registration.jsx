@@ -1,27 +1,56 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Lottie from 'react-lottie';
 import animationData from '../../public/Animation/regestation.json'
+import { MdOutlineDangerous } from "react-icons/md";
+import { toast } from "react-toastify";
 
 
 
 const Registration = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
     const { createUser } = useContext(AuthContext)
+    const [error,setError] = useState(null)
 
 
     const handleReg = (data) => {
+        // console.log(data.email);
         const { name, email, password } = data
-        console.log(name, email, password)
+        // console.log(name, email, password)
+        
+        if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)){
+            setError('Type valid email address')
+            return;
+        }
+        if (!/^[a-zA-Z0-9._%+-]{6,}@gmail\.com$/.test(email)) {
+            setError("minimum 6 char, ex- example@gmail.com")
+            return;
+        }
+        if(password.length < 6){
+            setError('password minimum 6 character')
+            return;
+        }
+        if (!/[A-Z]/.test(password)){
+            setError('Password must have an Uppercase letter')
+            return;
+        }
+        if (!/[a-z]/.test(password)){
+            setError('Password must have a Lowercase letter')
+            return;
+        }
+
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+                toast.success('Registration successful')
+                setError()
             })
             .catch(error => {
                 console.error(error);
+                toast.error('Already Use this email')
             })
     }
     // reg page svg
@@ -52,6 +81,16 @@ const Registration = () => {
                     <h1 className="text-2xl font-bold text-center">Registration Page</h1>
                     <hr className="border-[1px] border-white" />
                     <form onSubmit={handleSubmit(handleReg)} className="space-y-6 px-3">
+                        {
+                            error && 
+                            <div className="border-[1px] border-red-300 bg-red-100 p-2 flex gap-1">
+
+                                <MdOutlineDangerous size={21} className="text-red-700 mt-[2px]" />
+                                <div>
+                                    <p>{error}</p>
+                                </div>
+                            </div>
+                        }
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block text-gray-400">Name</label>
                             <input
