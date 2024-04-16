@@ -24,7 +24,7 @@ const Login = () => {
             .then(result => {
                 console.log("login successfully", result)
                 navigate(location?.state ? location.state : '/')
-                toast('Login successfully')
+                toast.success('Login successfully')
                 setError()
             })
             .catch(error => {
@@ -36,7 +36,7 @@ const Login = () => {
         loginWithGoogle()
             .then(result => {
                 console.log("google login successfully", result.user)
-                toast('Login successfully')
+                toast.success('Login successfully')
                 navigate(location?.state ? location.state : '/')
             })
             .catch(error => {
@@ -48,7 +48,7 @@ const Login = () => {
             .then(result => {
                 console.log(result.user);
                 navigate(location?.state ? location.state : '/')
-                toast('Login successfully')
+                toast.success('Login successfully')
             })
             .catch(error => {
                 console.error(error);
