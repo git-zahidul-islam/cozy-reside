@@ -7,6 +7,7 @@ import UpdateProfile from "../pages/UpdateProfile";
 import UserProfile from "../pages/UserProfile";
 import CardDetails from "../pages/CardDetails";
 import PrivateRouter from "./PrivateRouter";
+import ErrorElement from "../pages/ErrorElement";
 
 
 
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
     {
         path: '/',
         element: <Root></Root>,
+        errorElement: <ErrorElement></ErrorElement>,
         children: [
             {
                 path: '/',
