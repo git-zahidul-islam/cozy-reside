@@ -6,7 +6,7 @@ import 'animate.css';
 
 const BestPlace = () => {
     return (
-        <div className="bg-[#F6F5F2] py-10 px-0 md:rounded-tl-[250px] rounded-tl-[150px] md:rounded-br-[250px] rounded-br-[150px] border-l-4 border-[#5755FE]">
+        <div className="bg-[#ffd1e33c] py-10 px-0 md:rounded-tl-[250px] rounded-tl-[150px] md:rounded-br-[250px] rounded-br-[150px] border-l-4 border-[#5755FE]">
             <div className="flex items-center justify-center gap-5">
                 <hr className="w-3/12 border-[1px] border-[#65B741]" />
                 <FaMapMarkedAlt size={32} className="text-[#08D9D6]"></FaMapMarkedAlt>

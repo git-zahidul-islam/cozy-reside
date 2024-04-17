@@ -1,7 +1,7 @@
 
 const About = () => {
     return (
-        <div className="h-[50vh]">
+        <div className="">
             <p className="mt-10">
                 Welcome to Cozy Reside, where your dream home becomes a reality! 🏡
                 <br />
@@ -18,7 +18,6 @@ const About = () => {
                 <p>Phone: 8801794274577</p>
                 <p>email: mdzahidi491@gmail.com</p>
             </div>
-            {/* <Footer></Footer> */}
         </div>
     );
 };

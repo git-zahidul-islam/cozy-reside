@@ -16,12 +16,12 @@ const Card = ({ details }) => {
             data-aos-duration="1000"
             data-aos-easing="ease-in-out"
         >
-            <div className="shadow-md bg-white">
+            <div className="shadow-[rgba(0,_0,_0,_0.24)_0px_3px_8px] bg-white p-3">
                 <div className="h-64">
                     <img className="h-full w-full" src={image} alt="" />
-                </div>
-                <div className="px-3 space-y-2 py-3">
-                    <h1 className="text-lg font-semibold">{estate_title}</h1>
+                </div>  
+                <div className="space-y-2 flex flex-col">
+                    <h1 className="text-lg font-semibold grow h-12">{estate_title}</h1>
                     <h4 className="italic text-gray-500">{segment_name}, {area}</h4>
                     <h1 className="text-xl text-red-500">{price} <span className="text-gray-400">{status === 'rent' && "/month"}</span></h1>
                     <p>{description.split(" ").slice(0, 10).join(" ") + " . . . . . ."}</p>
