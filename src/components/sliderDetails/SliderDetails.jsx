@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { IoIosArrowDropright } from "react-icons/io";
 import { CiLocationOn } from "react-icons/ci";
 
-const SliderDetails = ({data}) => {
-    const { estate_title, segment_name,location, id }= data
+const SliderDetails = ({ data }) => {
+    const { estate_title, segment_name, location, id } = data
     return (
         <div>
             <div className="bg-[#0a0a0ad9] text-white">
                 <div className="lg:p-4 md:p-4 p-2">
                     <h1 className="md:text-xl font-semibold">{estate_title}</h1>
-                    <p className="flex gap-1 items-center text-[#00AFEF]"><CiLocationOn size={21}/>{location}</p>
+                    <p className="flex gap-1 items-center text-[#00AFEF]"><CiLocationOn size={21} />{location}</p>
                 </div>
             </div>
             <div className="flex">
@@ -21,4 +22,7 @@ const SliderDetails = ({data}) => {
     );
 };
 
+SliderDetails.propTypes = {
+    data: PropTypes.object.isRequired
+}
 export default SliderDetails;

@@ -115,10 +115,12 @@ const CardDetails = () => {
                 <div className='space-y-5'>
                     <div>
                         <h3 className='text-2xl font-bold text-[#00072D] text-center'>Subscribe for Update</h3>
-                        <p className='text-center'>Lorem ipsum dolor sit amet consectetur adipisicing <br /> elit. Debitis.</p>
+                        <p className='text-center'>Subscribe for more details including new homes</p>
                     </div>
-                    <div className="join">
-                        <input className="input input-bordered join-item rounded-l-full md:w-80 border-0" placeholder="Email" />
+                    <div className="join flex justify-center items-center">
+                        <input className="
+                        input input-bordered join-item rounded-l-full lg:w-8/12 md:w-8/12 
+                        w-6/12" placeholder="Email" />
                         <button className="btn join-item rounded-r-full bg-[#00AFEF]">Subscribe</button>
                     </div>
                 </div>

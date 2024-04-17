@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
 import { FaAnglesRight } from "react-icons/fa6";
 import { CiBookmarkPlus } from "react-icons/ci";
 import AOS from 'aos';
@@ -34,6 +35,7 @@ const Card = ({ details }) => {
     );
 };
 
+Card.propTypes = {
+    details: PropTypes.object.isRequired
+}
 export default Card;
-
-// 
