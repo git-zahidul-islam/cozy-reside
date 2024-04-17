@@ -31,12 +31,12 @@ const UpdateProfile = () => {
     }
 
     return (
-        <div className="flex lg:flex-row md:flex-row flex-col justify-center items-center gap-4 mt-16">
+        <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 justify-center items-center gap-4 mt-16">
             <Helmet>
                 <title>Cozy Reside | Update Profile</title>
             </Helmet>
             {/* user update show */}
-            <div className="flex flex-col items-center gap-4 border-2 p-4 border-[#00AFEF] md:w-5/12 min-h-96">
+            <div className="flex flex-col items-center gap-4 border-2 p-4 border-[#00AFEF] min-h-[435px] rounded-md">
                 <h1 className="text-2xl font-bold">Updated Data</h1>
                 <div className="w-36 h-36">
                     <img className="rounded-full h-full w-full" src={user.photoURL ? user.photoURL : defaultIMG} alt="photo" />
@@ -48,7 +48,7 @@ const UpdateProfile = () => {
             </div>
 
             {/* update part */}
-            <div className="lg:w-5/12 md:w-5/12 w-8/12 min-h-96 space-y-3 p-4 bg-[#2124229C] border-2">
+            <div className="min-h-[435px] space-y-3 p-4 bg-[#00afef81] rounded-md">
                 <h1 className="text-2xl font-bold text-center text-white py-2">Update Data</h1>
                 <form onSubmit={handleSubmit(handleUpdate)} className="space-y-6 px-3">
                     <div className="space-y-1 text-sm">
@@ -92,7 +92,7 @@ const UpdateProfile = () => {
                         />
                         {errors.email && <span className="text-red-500">This field is required</span>}
                     </div>
-                    <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Update</button>
+                    <button className="block w-full p-3 text-center rounded-sm bg-[#00AFEF] text-xl font-bold text-white">Update</button>
                 </form>
             </div>
 
