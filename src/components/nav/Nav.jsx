@@ -5,7 +5,6 @@ import { AuthContext } from "../../context/AuthProvider";
 
 const Nav = () => {
     const { userLogOut, user } = useContext(AuthContext)
-    const photoUser = '../../../public/otherIMG/user.png'
     const navLink = <>
         <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/'}>Home</NavLink></li>
         <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/updateProfile'}>Update Profile</NavLink></li>
@@ -49,7 +48,8 @@ const Nav = () => {
                             <div className="relative group">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : photoUser } />
+                                        <img alt="Tailwind CSS Navbar component" 
+                                        src={user.photoURL ? user.photoURL : "../../../public/otherIMG/user.png"} />
                                     </div>
                                 </div>
                                 {

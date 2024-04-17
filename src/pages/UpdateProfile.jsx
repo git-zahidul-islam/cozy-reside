@@ -2,7 +2,8 @@ import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
-import deafultIMG from '../../public/otherIMG/defaultIMG.jpg'
+import defaultIMG from '../../public/otherIMG/user.png'
+import { toast } from "react-toastify";
 
 
 const UpdateProfile = () => {
@@ -23,6 +24,7 @@ const UpdateProfile = () => {
             .then(() => {
                 setUser({ displayName: name, photo_url: photo_url })
                 console.log('profile update');
+                toast.success("Profile Update Successful")
             })
             .catch()
 
@@ -37,7 +39,7 @@ const UpdateProfile = () => {
             <div className="flex flex-col items-center gap-4 border-2 p-4 border-[#00AFEF] md:w-5/12 min-h-96">
                 <h1 className="text-2xl font-bold">Updated Data</h1>
                 <div className="w-36 h-36">
-                    <img className="rounded-full h-full w-full" src={user ? user.photoURL : deafultIMG} alt="photo" />
+                    <img className="rounded-full h-full w-full" src={user.photoURL ? user.photoURL : defaultIMG} alt="photo" />
                 </div>
                 <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-black text-center">Name: {user?.displayName}</h3>

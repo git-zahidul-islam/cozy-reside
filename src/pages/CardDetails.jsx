@@ -19,7 +19,7 @@ const CardDetails = () => {
 
 
     return (
-        <div className=''>
+        <div className='mt-5'>
             <Helmet>
                 <title>{estate_title.slice(0, 20)} . . .</title>
             </Helmet>

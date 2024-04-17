@@ -8,6 +8,7 @@ import { MdOutlineDangerous } from "react-icons/md";
 import { toast } from "react-toastify";
 import { IoEyeSharp } from "react-icons/io5";
 import { FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
 
 
 const Registration = () => {
@@ -24,7 +25,8 @@ const Registration = () => {
         const name = form.get("name")
         const email = form.get("email")
         const password = form.get("password")
-        console.log(name, email, password);
+        const photo = form.get("photo_url")
+        // console.log(name, email, password);
 
         if (password.length < 1) {
             setError('Type password')
@@ -46,6 +48,15 @@ const Registration = () => {
         createUser(email, password)
             .then(result => {
                 console.log(result.user)
+
+                // name & photo url
+                updateProfile(result.user,{
+                    displayName: name,
+                    photoURL: photo,
+                })
+                .then(() => console.log("name and photo upload"))
+                .catch(() => console.log("have error"))
+
                 toast.success('Registration successful')
                 setError()
                 navigate('/')
@@ -109,7 +120,6 @@ const Registration = () => {
                         <div className="space-y-1 text-sm">
                             <label htmlFor="username" className="block text-gray-400">Email</label>
                             <input
-
                                 type="email" name="email" id="email" placeholder="email" required className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                             />
                         </div>
@@ -126,9 +136,9 @@ const Registration = () => {
                                 {showPassword ? <FaEyeSlash></FaEyeSlash> : <IoEyeSharp></IoEyeSharp>}
                             </span>
                         </div>
-                        <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Register</button>
+                        <button className="block w-full p-3 text-center rounded-sm text-white text-lg bg-[#00AFEF]">Register</button>
                     </form>
-                    <p className="text-center">Already have account, <Link className="text-purple-600" to={'/login'}>login</Link></p>
+                    <p className="text-center">Already have account, <Link className="text-[#00afef] font-semibold" to={'/login'}>login</Link></p>
                 </div>
             </div>
         </div>
