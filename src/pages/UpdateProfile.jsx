@@ -9,16 +9,15 @@ import { toast } from "react-toastify";
 const UpdateProfile = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
     const { profileUpdate, setUser, user } = useContext(AuthContext)
-    console.log(user);
+    
 
     const [name, setName] = useState(user?.displayName || '')
     const [email, setEmail] = useState(user?.email || '')
     const [photo, setPhoto] = useState(user?.photoURL || '')
 
     const handleUpdate = (data) => {
-        const { name, photo_url, email } = data;
-        // console.log(name, photo_url);
-        console.log(name,photo_url,email);
+        const { name, photo_url } = data;
+        
 
         profileUpdate(name, photo_url)
             .then(() => {

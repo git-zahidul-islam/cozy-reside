@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { useParams, useLoaderData } from 'react-router-dom'
+import { useParams, useLoaderData, ScrollRestoration } from 'react-router-dom'
 import { CiLocationOn } from "react-icons/ci";
 import Footer from '../components/footer/Footer';
 import AOS from 'aos';
@@ -125,7 +125,7 @@ const CardDetails = () => {
                     </div>
                 </div>
             </div>
-            <Footer></Footer>
+            <ScrollRestoration />
         </div>
     );
 };

@@ -5,7 +5,7 @@ import { AuthContext } from "../context/AuthProvider";
 const UserProfile = () => {
     const {user} = useContext(AuthContext)
     return (
-        <div className="flex justify-center items-center h-[calc(100vh-68px)]">
+        <div className="flex justify-center items-center h-[60vh]">
             <Helmet>
                 <title>Cozy Reside | Profile</title>
             </Helmet>
