@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { FaAnglesRight } from "react-icons/fa6";
-import { IoHomeOutline } from "react-icons/io5";
+import { CiBookmarkPlus } from "react-icons/ci";
 
 
 const Card = ({ details }) => {
-    const { id, image, price, status, location, description, estate_title, segment_name,area } = details
+    const { id, image, price, status, description, estate_title, segment_name,area } = details
 
     return (
         <div>
@@ -19,7 +19,7 @@ const Card = ({ details }) => {
                     <p>{description.split(" ").slice(0, 10).join(" ") + " . . . . . ."}</p>
                     <div className="flex justify-between">
                         <Link to={`/card/${id}`}><button className="p-2 bg-[#65B741] text-white flex items-center gap-2"><span className="text-base font-semibold">View Details</span><FaAnglesRight></FaAnglesRight></button></Link>
-                        <p className="flex items-center gap-1 text-lg">{status} <IoHomeOutline className="text-red-500 bg-slate-300 w-8 h-8 p-1" /></p>
+                        <p className="flex items-center gap-1 text-lg">{status} <CiBookmarkPlus className="text-[#00AFEF] bg-slate-100 w-8 h-8 p-1" /></p>
                     </div>
                 </div>
             </div>

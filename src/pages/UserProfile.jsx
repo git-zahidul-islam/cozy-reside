@@ -9,9 +9,9 @@ const UserProfile = () => {
             <Helmet>
                 <title>Cozy Reside | Profile</title>
             </Helmet>
-            <div className="flex flex-col items-center gap-4 border-2 p-4 border-[#00AFEF] md:w-5/12 min-h-96">
-                <div className="w-36 h-36">
-                    <img className="rounded-full h-full w-full" src={user?.photoURL} alt="photo" />
+            <div className="flex flex-col items-center gap-4 border-2 p-4 bg-[#00AFEF7A] md:w-5/12 rounded-xl">
+                <div className="w-40 h-40">
+                    <img className="rounded-full h-full w-full border-4 p-2" src={user?.photoURL} alt="photo" />
                 </div>
                 <div className="space-y-2">
                     <h3 className="text-xl font-semibold text-black text-center">Name: {user?.displayName}</h3>

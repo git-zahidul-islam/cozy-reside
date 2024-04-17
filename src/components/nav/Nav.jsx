@@ -11,6 +11,7 @@ const Nav = () => {
         <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/'}>Home</NavLink></li>
         <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/updateProfile'}>Update Profile</NavLink></li>
         <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/userProfile'}>User Profile</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/about'}>About Us</NavLink></li>
     </>
 
     const handleLogOut = () => {

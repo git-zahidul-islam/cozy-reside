@@ -8,6 +8,7 @@ import UserProfile from "../pages/UserProfile";
 import CardDetails from "../pages/CardDetails";
 import PrivateRouter from "./PrivateRouter";
 import ErrorElement from "../pages/ErrorElement";
+import About from "../pages/About";
 
 
 
@@ -45,6 +46,10 @@ export const router = createBrowserRouter([
             {
                 path: '/registration',
                 element: <Registration></Registration>
+            },
+            {
+                path: '/about',
+                element: <About></About>
             }
         ]
     }

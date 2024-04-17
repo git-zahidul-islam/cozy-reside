@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
@@ -9,6 +9,10 @@ const UpdateProfile = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm()
     const { profileUpdate, setUser, user } = useContext(AuthContext)
     console.log(user);
+
+    const [name, setName] = useState(user?.displayName || '')
+    // const [email, setEmail] = useState(user?.email || '')
+    const [photo, setPhoto] = useState(user?.photoURL || '')
 
     const handleUpdate = (data) => {
         const { name, photo_url } = data;
@@ -48,7 +52,13 @@ const UpdateProfile = () => {
                         <label htmlFor="username" className="block text-base text-black font-semibold">Name</label>
                         <input
                             {...register("name", { required: true })}
-                            type="text" name="name" id="name" placeholder={user ? user?.displayName : 'name'} className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder={user ? user?.displayName : 'name'}
+                            className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                         {errors.name && <span className="text-red-500">This field is required</span>}
                     </div>
@@ -56,14 +66,26 @@ const UpdateProfile = () => {
                         <label htmlFor="username" className="block text-base text-black font-semibold">Photo url</label>
                         <input
                             {...register("photo_url")}
-                            type="text" name="photo_url" id="photo_url" placeholder="input photo url" className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
+                            type="text"
+                            name="photo_url"
+                            id="photo_url"
+                            value={photo}
+                            onChange={(e) => setPhoto(e.target.value)}
+                            placeholder={user ? user?.photoURL : 'photo url here'}
+                            className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                     </div>
                     {/* <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-base text-black font-semibold">Email</label>
                         <input
                             {...register("email", { required: true })}
-                            type="email" name="email" id="email" placeholder="email" className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
+                            type="email"
+                            name="email"
+                            id="email"
+                            value={email}
+                            onSubmit={(e) => setEmail(e.target.value)}
+                            placeholder="email"
+                            className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                         {errors.email && <span className="text-red-500">This field is required</span>}
                     </div> */}
