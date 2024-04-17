@@ -54,9 +54,9 @@ const CardDetails = () => {
                 <div className='border-l-4 ps-2 main-border'>
                     <h3 className='text-lg font-medium'>Facilities</h3>
                     <div className='flex gap-2 text-gray-500'>
-                        <p>{facilities[0]}</p>
-                        <p>{facilities[1]}</p>
-                        <p>{facilities[2]}</p>
+                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[0]}</p>
+                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[1]}</p>
+                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[2]}</p>
                     </div>
                 </div>
             </div>

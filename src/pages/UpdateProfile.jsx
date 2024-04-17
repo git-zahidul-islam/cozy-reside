@@ -11,8 +11,8 @@ const UpdateProfile = () => {
     console.log(user);
 
     const handleUpdate = (data) => {
-        const { name, email, photo_url } = data;
-        console.log(name, email, photo_url);
+        const { name, photo_url } = data;
+        console.log(name, photo_url);
 
         profileUpdate(name, photo_url)
             .then(() => {

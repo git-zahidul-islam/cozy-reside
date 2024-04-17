@@ -7,6 +7,8 @@ import Lottie from 'react-lottie';
 import { MdOutlineDangerous } from "react-icons/md";
 import animationData from '../../public/Animation/Animation - 1712975389596.json'
 import { toast } from "react-toastify";
+import { IoEyeSharp } from "react-icons/io5";
+import { FaEyeSlash } from "react-icons/fa";
 
 
 const Login = () => {
@@ -14,7 +16,8 @@ const Login = () => {
     const { userLogin, loginWithGoogle, loginWithGithub } = useContext(AuthContext)
     const location = useLocation()
     const navigate = useNavigate()
-    const [error,setError] = useState(null)
+    const [error, setError] = useState(null)
+    const [showPassword, setShowPassword] = useState(false)
 
     const handleLogin = (data) => {
         const { email, password } = data;
@@ -76,15 +79,15 @@ const Login = () => {
                     options={defaultOptions}
                     height={450}
                     width={500}
-                >     
+                >
                 </Lottie>
             </div>
             <div className=" w-full max-w-md p-8 space-y-3 bg-gray-200">
                 <h1 className="text-2xl font-bold text-center">Login</h1>
-                
+
                 <form onSubmit={handleSubmit(handleLogin)} className="space-y-6 px-3">
                     {
-                        error && 
+                        error &&
                         <div className="border-[1px] border-red-300 bg-red-100 p-2 flex gap-1">
 
                             <MdOutlineDangerous size={21} className="text-red-700 mt-[2px]" />
@@ -101,12 +104,16 @@ const Login = () => {
                         />
                         {errors.email && <span className="text-red-500">This field is required</span>}
                     </div>
-                    <div className="space-y-1 text-sm">
+                    <div className="space-y-1 text-sm relative">
                         <label htmlFor="password" className="block text-gray-400">Password</label>
                         <input
                             {...register("password", { required: true })}
-                            type="password" name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  focus:border-violet-400 bg-white"
+                            type={showPassword ? "text" : "password"}
+                            name="password" id="password" placeholder="Password" className="w-full px-4 py-3 rounded-md  focus:border-violet-400 bg-white"
                         />
+                        <span className="absolute right-8 top-8 text-[22px]" onClick={() => setShowPassword(!showPassword)}>
+                            {showPassword ? <FaEyeSlash></FaEyeSlash> : <IoEyeSharp></IoEyeSharp>}
+                        </span>
                         {errors.password && <span className="text-red-500">This field is required</span>}
                         <div className="flex justify-end text-xs text-gray-400">
                             <a rel="noopener noreferrer" href="#">Forgot Password?</a>
@@ -142,7 +149,7 @@ const Login = () => {
 
                     </button>
                 </div>
-                
+
 
             </div>
         </div>
