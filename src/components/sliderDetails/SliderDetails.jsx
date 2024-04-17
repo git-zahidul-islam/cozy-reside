@@ -16,7 +16,7 @@ const SliderDetails = ({ data }) => {
             <div className="flex">
                 {/* <p className="bg-[#00AFEF] p-4">{status}</p> */}
                 <p className="text-white font-medium lg:px-4 md:px-4 px-2 lg:py-[18px] md:py-[18px] py-2 bg-[#00AFEF]">{segment_name}</p>
-                <Link className="lg:p-4 md:p-4 p-2 bg-white" to={`/card/${id}`}><IoIosArrowDropright size={30} /></Link>
+                <Link className="lg:p-4 md:p-4 p-2 bg-white" to={`/card/${id}`}><IoIosArrowDropright size={30}/></Link>
             </div>
         </div>
     );

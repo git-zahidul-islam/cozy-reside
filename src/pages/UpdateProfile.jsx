@@ -22,7 +22,7 @@ const UpdateProfile = () => {
 
         profileUpdate(name, photo_url)
             .then(() => {
-                setUser({ displayName: name, photo_url: photo_url })
+                setUser({ ...user,displayName: name, photoURL: photo_url })
                 console.log('profile update');
                 toast.success("Profile Update Successful")
             })
@@ -60,7 +60,7 @@ const UpdateProfile = () => {
                             id="name"
                             value={name}
                             onChange={(e) => setName(e.target.value)}
-                            placeholder={user ? user?.displayName : 'name'}
+                            placeholder={user?.displayName || 'name'}
                             className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                         {errors.name && <span className="text-red-500">This field is required</span>}
@@ -74,7 +74,7 @@ const UpdateProfile = () => {
                             id="photo_url"
                             value={photo}
                             onChange={(e) => setPhoto(e.target.value)}
-                            placeholder={user ? user?.photoURL : 'photo url here'}
+                            placeholder={user?.photoURL || 'photo url here'}
                             className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                     </div>
@@ -87,7 +87,7 @@ const UpdateProfile = () => {
                             id="email"
                             value={email}
                             onSubmit={(e) => setEmail(e.target.value)}
-                            placeholder="email"
+                            placeholder={user?.email || "email"}
                             className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                         {errors.email && <span className="text-red-500">This field is required</span>}
