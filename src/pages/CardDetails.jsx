@@ -2,6 +2,9 @@ import { Helmet } from 'react-helmet-async';
 import { useParams, useLoaderData } from 'react-router-dom'
 import { CiLocationOn } from "react-icons/ci";
 import Footer from '../components/footer/Footer';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 
 const CardDetails = () => {
@@ -54,9 +57,9 @@ const CardDetails = () => {
                 <div className='border-l-4 ps-2 main-border'>
                     <h3 className='text-lg font-medium'>Facilities</h3>
                     <div className='flex gap-2 text-gray-500'>
-                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[0]}</p>
-                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[1]}</p>
-                        <p className='bg-[#00AFEF] p-1 text-white'>{facilities[2]}</p>
+                        <p className='bg-[#00072D] p-1 text-white'>{facilities[0]}</p>
+                        <p className='bg-[#00072D] p-1 text-white'>{facilities[1]}</p>
+                        <p className='bg-[#00072D] p-1 text-white'>{facilities[2]}</p>
                     </div>
                 </div>
             </div>
@@ -71,21 +74,35 @@ const CardDetails = () => {
                 <p className='leading-7'>{description}</p>
             </div>
             <div className='mb-5 space-y-5'>
-                <div className='flex lg:flex-row md:flex-row flex-col items-center gap-4'>
+                <div data-aos="fade-right"
+                    data-aos-delay="120"
+                    data-aos-duration="1400"
+                    className='flex lg:flex-row md:flex-row flex-col items-center gap-4'
+                >
                     <img className='md:w-5/12' src={collection_image[2]} alt="inside 1" />
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Living Room</h1>
                         <p>" Indulge in the epitome of comfort and sophistication within our meticulously designed living room space. Sink into sumptuous seating arrangements amidst an atmosphere exuding serenity and refinement. Whether youre hosting cherished gatherings or seeking solace in quiet contemplation, our living room offers the perfect setting for every moment. Immerse yourself in unparalleled relaxation and create lasting memories in this haven of elegance and warmth. "</p>
                     </div>
                 </div>
-                <div className='flex lg:flex-row md:flex-row flex-col-reverse items-center gap-4'>
+                <div
+                    data-aos="fade-right"
+                    data-aos-delay="120"
+                    data-aos-duration="1300"
+                    className='flex lg:flex-row md:flex-row flex-col-reverse items-center gap-4'
+                >
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Kitchen</h1>
                         <p>"Step into a realm where flavors fuse and creativity flows—a kitchen where every meal is a masterpiece in the making. From the tantalizing scents to the symphony of sizzles, our kitchen is where culinary magic comes to life. Discover the joy of cooking and the art of gathering around the table in our inviting sanctuary. Welcome to a space where delicious moments are crafted and cherished."</p>
                     </div>
                     <img className='md:w-5/12' src={collection_image[1]} alt="inside 1" />
                 </div>
-                <div className='flex lg:flex-row md:flex-row flex-col items-center gap-4'>
+                <div
+                    data-aos="fade-up-right"
+                    data-aos-delay="120"
+                    data-aos-duration="1300"
+                    className='flex lg:flex-row md:flex-row flex-col items-center gap-4'
+                >
                     <img className='md:w-5/12' src={collection_image[0]} alt="inside 1" />
                     <div className=''>
                         <h1 className='text-2xl text-[#00072D] font-bold'>Reading Place</h1>

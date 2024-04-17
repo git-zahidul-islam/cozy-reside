@@ -1,14 +1,21 @@
 import { Link } from "react-router-dom";
 import { FaAnglesRight } from "react-icons/fa6";
 import { CiBookmarkPlus } from "react-icons/ci";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+AOS.init();
 
 const Card = ({ details }) => {
-    const { id, image, price, status, description, estate_title, segment_name,area } = details
+    const { id, image, price, status, description, estate_title, segment_name, area } = details
 
     return (
-        <div>
-            <div className="shadow-md bg-white"> 
+        <div
+            data-aos="fade-up"
+            data-aos-delay="150"
+            data-aos-duration="1000"
+            data-aos-easing="ease-in-out"
+        >
+            <div className="shadow-md bg-white">
                 <div className="h-64">
                     <img className="h-full w-full" src={image} alt="" />
                 </div>

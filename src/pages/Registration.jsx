@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../context/AuthProvider";
 import { Helmet } from "react-helmet-async";
 import Lottie from 'react-lottie';
@@ -14,6 +14,7 @@ const Registration = () => {
     const { createUser } = useContext(AuthContext)
     const [error, setError] = useState(null)
     const [showPassword, setShowPassword] = useState(false)
+    const navigate = useNavigate()
 
 
     const handleReg = (e) => {
@@ -24,16 +25,6 @@ const Registration = () => {
         const email = form.get("email")
         const password = form.get("password")
         console.log(name, email, password);
-
-
-        // if (!/^[a-zA-Z0-9._%+-]+@gmail\.com$/.test(email)){
-        //     setError('Type valid email address')
-        //     return;
-        // }
-        // if (!/^[a-zA-Z0-9._%+-]{6,}@gmail\.com$/.test(email)) {
-        //     setError("minimum 6 char, ex- example@gmail.com")
-        //     return;
-        // }
 
         if (password.length < 1) {
             setError('Type password')
@@ -57,6 +48,7 @@ const Registration = () => {
                 console.log(result.user)
                 toast.success('Registration successful')
                 setError()
+                navigate('/')
             })
             .catch(error => {
                 console.error(error);

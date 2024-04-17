@@ -21,7 +21,7 @@ const Home = () => {
             <BestPlace></BestPlace>
             <div className='space-y-6'>
                 <div className='flex flex-col items-center'>
-                    <h1 className='text-3xl font-bold text-center'>Our All <span className='text-[#FF55BB]'>Property</span> List</h1>
+                    <h1 className='text-3xl font-bold text-center'>Our All <span className='text-[#00AFEF]'>Property</span> List</h1>
                     <p className='text-center text-lg md:w-[600px]'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, cupiditate. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.</p>
                 </div>
                 <div className='grid md:grid-cols-3 gap-10'>

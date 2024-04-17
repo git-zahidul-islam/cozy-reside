@@ -33,11 +33,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/updateProfile',
-                element: <UpdateProfile></UpdateProfile>
+                element: <PrivateRouter><UpdateProfile></UpdateProfile></PrivateRouter>
             },
             {
                 path: '/userProfile',
-                element: <UserProfile></UserProfile>
+                element: <PrivateRouter><UserProfile></UserProfile></PrivateRouter>
             },
             {
                 path: '/login',
@@ -49,7 +49,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: '/about',
-                element: <About></About>
+                element: <PrivateRouter><About></About></PrivateRouter>
             }
         ]
     }

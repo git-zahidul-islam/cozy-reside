@@ -11,12 +11,13 @@ const UpdateProfile = () => {
     console.log(user);
 
     const [name, setName] = useState(user?.displayName || '')
-    // const [email, setEmail] = useState(user?.email || '')
+    const [email, setEmail] = useState(user?.email || '')
     const [photo, setPhoto] = useState(user?.photoURL || '')
 
     const handleUpdate = (data) => {
-        const { name, photo_url } = data;
-        console.log(name, photo_url);
+        const { name, photo_url, email } = data;
+        // console.log(name, photo_url);
+        console.log(name,photo_url,email);
 
         profileUpdate(name, photo_url)
             .then(() => {
@@ -75,7 +76,7 @@ const UpdateProfile = () => {
                             className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                     </div>
-                    {/* <div className="space-y-1 text-sm">
+                    <div className="space-y-1 text-sm">
                         <label htmlFor="username" className="block text-base text-black font-semibold">Email</label>
                         <input
                             {...register("email", { required: true })}
@@ -88,7 +89,7 @@ const UpdateProfile = () => {
                             className="w-full px-4 py-3 rounded-md focus:border-violet-400 bg-white"
                         />
                         {errors.email && <span className="text-red-500">This field is required</span>}
-                    </div> */}
+                    </div>
                     <button className="block w-full p-3 text-center rounded-sm text-gray-900 bg-violet-400">Update</button>
                 </form>
             </div>

@@ -1,17 +1,16 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../context/AuthProvider";
-import userPhoto from '../../../public/otherIMG/user.png'
+
 
 const Nav = () => {
     const { userLogOut, user } = useContext(AuthContext)
-    // console.log("for kmow name", user)
-
+    const photoUser = '../../../public/otherIMG/user.png'
     const navLink = <>
-        <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/'}>Home</NavLink></li>
-        <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/updateProfile'}>Update Profile</NavLink></li>
-        <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/userProfile'}>User Profile</NavLink></li>
-        <li><NavLink className={({isActive}) => isActive ? "text-white text-xl font-semibold bg-[#5755FE] px-3 py-2 border-r-4 border-r-[#FF55BB] rounded-md" : "text-xl font-semibold"} to={'/about'}>About Us</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/'}>Home</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/updateProfile'}>Update Profile</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/userProfile'}>User Profile</NavLink></li>
+        <li><NavLink className={({isActive}) => isActive ? "text-[#00AFEF] text-xl font-semibold px-3 py-2 rounded-md" : "text-xl font-semibold"} to={'/about'}>About Us</NavLink></li>
     </>
 
     const handleLogOut = () => {
@@ -32,7 +31,7 @@ const Nav = () => {
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu-sm dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
+                    <ul tabIndex={0} className="flex gap-3 flex-col dropdown-content mt-3 z-10 p-2 shadow bg-base-100 rounded-box w-52">
                         {navLink}
                     </ul>
                 </div>
@@ -50,17 +49,20 @@ const Nav = () => {
                             <div className="relative group">
                                 <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                     <div className="w-10 rounded-full">
-                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : userPhoto } />
+                                        <img alt="Tailwind CSS Navbar component" src={user ? user?.photoURL : photoUser } />
                                     </div>
                                 </div>
-                                <div className="absolute invisible group-hover:visible bg-slate-500 p-2 z-50 w-36 -left-10 rounded-lg">
-                                    <h1>{user && user.displayName }</h1>
-                                </div>
+                                {
+                                    user.displayName &&
+                                    <div className="absolute invisible group-hover:visible bg-[#49c3f0d0] p-2 z-50 w-36 -left-10 rounded-lg">
+                                        <h1 className="text-white text-lg">{user && user.displayName}</h1>
+                                    </div>
+                                }
                             </div>
-                            <button onClick={handleLogOut} className="px-3 py-2 bg-[#5755FE] text-white text-base font-medium">Logout</button>
+                            <button onClick={handleLogOut} className="px-3 py-2 bg-[#00afefbc] text-white text-base font-medium">Logout</button>
                         </div>
                         :
-                        <Link to={'/login'}><button className="px-3 py-2 bg-[#5755FE] text-white font-bold">Login</button></Link>
+                        <Link to={'/login'}><button className="px-3 py-2 bg-[#00AFEF] text-white font-bold">Login</button></Link>
                 }
 
             </div>

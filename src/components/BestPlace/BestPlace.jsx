@@ -13,7 +13,7 @@ const BestPlace = () => {
                 <hr className="w-3/12 border-[1px] border-[#65B741] " />
             </div>
             <div className="mt-5">
-                <h1 className="text-center text-3xl font-bold">Top 3 <span className=" text-[#8B93FF]">Rented</span> Property</h1>
+                <h1 className="text-center text-3xl font-bold">Top 3 <span className=" text-[#00AFEF]">Rented</span> Property</h1>
             </div>
             <div className="flex lg:flex-row md:flex-row flex-col justify-center items-center gap-5 mt-10">
                 <div className="lg:w-3/12 md:w-3/12 w-5/12 h-full border-[5px] border-green-300"><img className="transition-all hover:scale-110 hover:rounded-lg" src={sliderImage1} alt="" /></div>
