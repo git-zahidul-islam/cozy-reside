@@ -1,7 +1,11 @@
+import { Helmet } from "react-helmet-async";
 
 const About = () => {
     return (
-        <div className="">
+        <div>
+            <Helmet>
+                <title>Cozy Reside | About</title>
+            </Helmet>
             <p className="mt-10">
                 Welcome to Cozy Reside, where your dream home becomes a reality! 🏡
                 <br />
