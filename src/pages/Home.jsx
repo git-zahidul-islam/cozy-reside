@@ -1,10 +1,12 @@
-import {useLoaderData} from 'react-router-dom'
-
+import { useLoaderData } from 'react-router-dom'
 import Banner from "../components/banner/Banner";
-import Footer from "../components/footer/Footer";
 import Card from '../components/card/Card';
 import { Helmet } from 'react-helmet-async';
 import BestPlace from '../components/BestPlace/BestPlace';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import Accordion from '../components/accordion/Accordion';
+AOS.init();
 
 
 const Home = () => {
@@ -20,7 +22,13 @@ const Home = () => {
             <Banner></Banner>
             <BestPlace></BestPlace>
             <div className='space-y-6'>
-                <div className='flex flex-col items-center'>
+                <div
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                    data-aos-delay="150"
+                    data-aos-duration="1000"
+
+                    className='flex flex-col items-center'>
                     <h1 className='text-3xl font-bold text-center'>Our All <span className='text-[#00AFEF]'>Property</span> List</h1>
                     <p className='text-center text-lg md:w-[600px]'>You can get all types of houses of your choice from us at affordable prices. So why delay booked now</p>
                 </div>
@@ -30,6 +38,7 @@ const Home = () => {
                     }
                 </div>
             </div>
+            <Accordion></Accordion>
         </div>
     );
 };

@@ -6,7 +6,7 @@
         "segment_name": "Single-family home",
         "description": "Step into luxury living with this modern home. Featuring spacious interiors, a beautifully landscaped garden, and upscale finishes. The open floor plan is perfect for entertaining guests or relaxing with family. Retreat to the master suite with a spa-like bathroom and walk-in closet. Enjoy outdoor living in the private backyard oasis, complete with a patio and lush greenery. This home offers a peaceful retreat from the hustle and bustle of city life, while still being conveniently located near schools, parks, and shopping centers. Experience the best of both worlds with comfort and convenience at your fingertips.",
         "price": "$1,500,000",
-        "status": "sale",
+        "status": "Sale",
         "area": "3000 sqft",
         "location": "Suburban Neighborhood, City A",
         "facilities": [
@@ -27,7 +27,7 @@
         "segment_name": "Townhouse",
         "description": "Escape to this townhouse retreat nestled in scenic surroundings. With its cozy atmosphere, outdoor living spaces, and proximity to nature trails. The spacious living areas are filled with natural light, creating a welcoming ambiance. Unwind on the deck overlooking the tranquil community pool or explore nearby walking trails. This is the perfect place to call home for those seeking serenity and convenience. With easy access to downtown amenities and major highways, you can enjoy the best of suburban living without sacrificing urban conveniences.",
         "price": "$700,000",
-        "status": "rent",
+        "status": "Rent",
         "area": "2000 sqft",
         "location": "Sylvan Heights, City B",
         "facilities": [
@@ -48,7 +48,7 @@
         "segment_name": "Apartment",
         "description": "Experience luxury apartment living in the heart of the city. With sleek modern design, top-notch amenities, and panoramic city views. The spacious floor plan offers versatility for both living and entertaining. Relax and rejuvenate in the building's exclusive swimming pool and fitness center. Enjoy the convenience of concierge service and secure parking. This apartment epitomizes urban sophistication and style. With its prime location in the bustling downtown district, you'll have easy access to restaurants, shops, and entertainment venues.",
         "price": "$900,000",
-        "status": "sale",
+        "status": "Sale",
         "area": "1800 sqft",
         "location": "Downtown District, City C",
         "facilities": [
@@ -69,7 +69,7 @@
         "segment_name": "Single-family home",
         "description": "This charming home boasts garden views and a serene atmosphere. Ideal for families, it offers spacious living areas, a gourmet kitchen, and a backyard oasis. The cozy fireplace adds warmth to the living room, creating a perfect spot for relaxation. The home office provides a quiet space for remote work or study. Step outside to the backyard garden and patio, perfect for outdoor dining or gardening enthusiasts. With its peaceful suburban location, this home offers a tranquil retreat from the hustle and bustle of city life.",
         "price": "$800,000",
-        "status": "rent",
+        "status": "Rent",
         "area": "2500 sqft",
         "location": "Quiet Suburb, City D",
         "facilities": [
@@ -90,7 +90,7 @@
         "segment_name": "Townhouse",
         "description": "Live in style with this modern townhouse featuring a rooftop terrace. Perfect for entertaining, it offers sleek design, open-plan living, and convenient access to urban amenities. The rooftop terrace provides stunning views of the city skyline, ideal for hosting gatherings or enjoying a quiet evening. Smart home technology enhances convenience, allowing you to control lighting and temperature with ease. This townhouse offers contemporary living at its finest. With its prime location in the bustling city center, you'll be just steps away from restaurants, shops, and entertainment venues.",
         "price": "$950,000",
-        "status": "sale",
+        "status": "Sale",
         "area": "2200 sqft",
         "location": "City Center, City E",
         "facilities": [
@@ -111,7 +111,7 @@
         "segment_name": "Apartment",
         "description": "Enjoy breathtaking river views from this luxurious apartment. With spacious layouts, premium finishes, and resort-style amenities. The riverfront balcony is perfect for morning coffee or evening relaxation, offering serene views of the water. Indulge in spa-like amenities including a luxurious spa and concierge service. This apartment provides a serene retreat amidst the hustle and bustle of city life. With its prime waterfront location, you'll have easy access to parks, walking trails, and waterfront dining options.",
         "price": "$950,000",
-        "status": "sale",
+        "status": "Sale",
         "area": "2000 sqft",
         "location": "Waterfront District, City F",
         "facilities": [

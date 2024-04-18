@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import { useParams, useLoaderData, ScrollRestoration } from 'react-router-dom'
 import { CiLocationOn } from "react-icons/ci";
-import Footer from '../components/footer/Footer';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -49,7 +48,7 @@ const CardDetails = () => {
                     <p className='flex items-center gap-2 text-[#54595F] text-lg'><CiLocationOn className='main-text'></CiLocationOn>{location}</p>
                 </div>
             </div>
-            <div className='flex justify-around gap-3 bg-amber-300 py-4 -rotate-2 mt-8'>
+            <div className='flex justify-around md:flex-row flex-col gap-3 bg-[#00afef5d] py-4 md:-rotate-2  mt-8'>
                 <div className='border-l-4 ps-2 main-border'>
                     <p className='text-lg font-medium'>Category</p>
                     <p className='text-gray-500'>{segment_name}</p>
@@ -57,9 +56,9 @@ const CardDetails = () => {
                 <div className='border-l-4 ps-2 main-border'>
                     <h3 className='text-lg font-medium'>Facilities</h3>
                     <div className='flex gap-2 text-gray-500'>
-                        <p className='bg-[#00072D] p-1 text-white'>{facilities[0]}</p>
-                        <p className='bg-[#00072D] p-1 text-white'>{facilities[1]}</p>
-                        <p className='bg-[#00072D] p-1 text-white'>{facilities[2]}</p>
+                        <p className='bg-[#00072de9] p-1 text-white'>{facilities[0]}</p>
+                        <p className='bg-[#00072de9] p-1 text-white'>{facilities[1]}</p>
+                        <p className='bg-[#00072de9] p-1 text-white'>{facilities[2]}</p>
                     </div>
                 </div>
             </div>
